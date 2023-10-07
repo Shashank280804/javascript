@@ -31,8 +31,6 @@ function loginUserMessage(username = "sam"){
     return `${username} just logged in`
 }
 
-// console.log(loginUserMessage("hitesh"))
-// console.log(loginUserMessage("hitesh"))
 
 
 function calculateCartPrice(val1, val2, ...num1){
