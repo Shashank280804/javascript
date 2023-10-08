@@ -7,7 +7,7 @@ let valueInNumber = Number(score)
 //console.log(typeof valueInNumber);
 
 
-let isLoggedIn = "hitesh"
+let isLoggedIn = "shashank"
 
 let booleanIsLoggedIn = Boolean(isLoggedIn)
 //  console.log(booleanIsLoggedIn);
