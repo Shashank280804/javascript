@@ -11,7 +11,7 @@ promiseOne.then(function() {
 
 const promiseThree = new Promise(function(resolve, reject) {
     setTimeout(function() {
-        resolve({ username: "chai", email: "chai@example.com" });
+        resolve({ username: "shashu", email: "shashu@example.com" });
     }, 1000);
 });
 

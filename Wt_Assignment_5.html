@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Example</title>
+</head>
+<body>
+    <h1>AJAX Example</h1>
+    <button id="loadDataButton">Load Data</button>
+    <div id="dataContainer"></div>
+
+    <script>
+        document.getElementById("loadDataButton").addEventListener("click", loadData);
+
+        function loadData() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    document.getElementById("dataContainer").innerHTML = "Title: " + response.title + "<br>Body: " + response.body;
+                } else {
+                    console.error("Request failed with status code: " + xhr.status);
+                }
+            };
+
+            xhr.onerror = function () {
+                console.error("Network request failed");
+            };
+
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Example</title>
+</head>
+<body>
+    <h1>JSON Example</h1>
+
+    <p>JSON Data:</p>
+    <pre id="json-data"></pre>
+
+    <p>JavaScript Object:</p>
+    <pre id="js-object"></pre>
+
+    <button onclick="parseJSON()">Parse JSON</button>
+    <button onclick="stringifyJSON()">Stringify JSON</button>
+
+    <script>
+        const jsonData = '{"name": "John", "age": 30, "city": "New York"}';
+
+        function parseJSON() {
+            try {
+                const jsObject = JSON.parse(jsonData);
+
+                document.getElementById("js-object").textContent = JSON.stringify(jsObject, null, 2);
+            } catch (error) {
+                console.error("Error parsing JSON:", error);
+            }
+        }
+
+        function stringifyJSON() {
+            try {
+                const jsObject = {
+                    name: "Alice",
+                    age: 25,
+                    city: "San Francisco"
+                };
+
+                const jsonString = JSON.stringify(jsObject, null, 2);
+
+                document.getElementById("json-data").textContent = jsonString;
+            } catch (error) {
+                console.error("Error stringifying JSON:", error);
+            }
+        }
+    </script>
+</body>
+</html>
